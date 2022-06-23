@@ -1,0 +1,9 @@
+function fedora-to-flathub {
+  for app in "$@"
+  do
+    flatpak uninstall --assumeyes --noninteractive --system "$app" &&
+    flatpak install --assumeyes --noninteractive --system flathub "$app";
+  done
+}
+
+alias f2fh='fedora-to-flathub';
