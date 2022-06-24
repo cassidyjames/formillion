@@ -1,0 +1,26 @@
+#!/bin/bash
+#
+# fedora-to-flatpak (f2fh)
+#
+# Uninstall apps from the Fedora remote and install them from a system-added
+# Flathub remote.
+
+function fedora-to-flathub {
+  flatpak remote-add --system --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+  flatpak remote-modify --system --no-filter flathub
+
+  if [ "$1" == "--all" ]; then
+    for app in `flatpak remote-ls fedora --app --columns=application`; do
+      fedora-to-flathub "$app"
+    done
+    flatpak uninstall --assumeyes --noninterative --unused
+    flatpak remote-delete --system fedora
+  else
+    for app in "$@"; do
+      flatpak uninstall --system --assumeyes --noninteractive "$app" &&
+      flatpak install --system --assumeyes --noninteractive flathub "$app"
+    done
+  fi
+}
+
+alias f2fh='fedora-to-flathub'

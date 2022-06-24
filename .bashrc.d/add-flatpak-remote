@@ -1,0 +1,29 @@
+#!/bin/bash
+#
+# add-flatpak-remote (afr)
+#
+# Add Flatpak remote(s) with sensible titles for display in GNOME Software
+
+function add-flatpak-remote {
+  for arg in "$@"; do
+    case $arg in
+
+      flathub | Flathub)
+        flatpak remote-add --if-not-exists --user flathub https://flathub.org/repo/flathub.flatpakrepo
+        echo "Added Flathub user remote"
+        ;;
+
+      appcenter | AppCenter)
+        flatpak remote-add --user --if-not-exists appcenter https://flatpak.elementary.io/repo.flatpakrepo
+        echo "Added AppCenter user remote"
+        ;;
+
+      *)
+        echo "Unknown Flatpak remote '$arg'"
+        exit 1
+        ;;
+    esac
+  done
+}
+
+alias afr='add-flatpak-remote'
