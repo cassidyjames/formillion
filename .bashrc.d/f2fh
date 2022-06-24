@@ -1,9 +1,20 @@
+#!/bin/bash
+
 function fedora-to-flathub {
-  for app in "$@"
-  do
-    flatpak uninstall --assumeyes --noninteractive --system "$app" &&
-    flatpak install --assumeyes --noninteractive --system flathub "$app";
-  done
+  flatpak remote-add --system --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo;
+  flatpak remote-modify --system --no-filter flathub;
+  if [ "$1" == "--all" ]; then
+    for app in `flatpak remote-ls fedora --app --columns=application`; do
+      fedora-to-flathub "$app";
+    done
+    flatpak uninstall --assumeyes --noninterative --unused;
+    flatpak remote-delete --system fedora;
+  else
+    for app in "$@"; do
+      flatpak uninstall --system --assumeyes --noninteractive "$app" &&
+      flatpak install --system --assumeyes --noninteractive flathub "$app";
+    done
+  fi
 }
 
 alias f2fh='fedora-to-flathub';
