@@ -1,0 +1,53 @@
+#!/bin/bash
+#
+# silverblue-misc (smisc)
+#
+# Miscellaneous commands I always use on Fedora Silverblue
+
+function silverblue-misc {
+  ## Add Flathub at a system level if it's not there
+  flatpak remote-add --system --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+  flatpak remote-modify --system flathub --no-filter --title="Flathub (System)" --description="Central repository of Flatpak applications"
+
+  ## Add Flathub as a user remote
+  flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+  ## Uninstall apps to be replaced
+  rpm-ostree override remove \
+    gnome-terminal gnome-terminal-nautilus \
+    firefox firefox-langpacks
+
+  ## Install better defaults
+  rpm-ostree install gnome-console
+  flatpak install --assumeyes --noninteractive --system flathub \
+    org.gnome.Epiphany \
+    org.gnome.Music \
+    org.gnome.Totem \
+    ;
+
+  ## My user apps
+  flatpak install --assumeyes --noninteractive --user flathub \
+    com.bitwarden.desktop \
+    com.cassidyjames.plausible \
+    com.discordapp.Discord \
+    com.github.cassidyjames.clairvoyant \
+    com.github.cassidyjames.dippi \
+    com.plexamp.Plexamp \
+    com.slack.Slack \
+    com.valvesoftware.Steam \
+    io.bassi.Amberol \
+    io.github.realmazharhussain.GdmSettings \
+    nl.hjdskes.gcolor3 \
+    org.chromium.Chromium \
+    org.gnome.Boxes \
+    org.gnome.Builder \
+    org.gnome.design.Contrast \
+    org.mozilla.firefox \
+    org.telegram.desktop \
+    re.sonny.Commit \
+    tv.plex.PlexDesktop \
+    tv.plex.PlexHTPC \
+    ;
+}
+
+alias smisc='silverblue-misc'
