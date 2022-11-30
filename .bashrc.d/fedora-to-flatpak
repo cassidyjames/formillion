@@ -7,7 +7,7 @@
 
 function fedora-to-flathub {
   flatpak remote-add --system --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-  flatpak remote-modify --system --no-filter flathub
+  flatpak remote-modify --system flathub --no-filter --title="Flathub (System)" --description="Central repository of Flatpak applications"
 
   if [ "$1" == "--all" ]; then
     for app in `flatpak remote-ls fedora --app --columns=application`; do
