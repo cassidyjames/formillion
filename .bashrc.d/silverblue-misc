@@ -51,6 +51,7 @@ function silverblue-misc {
     tv.plex.PlexDesktop \
     tv.plex.PlexHTPC \
     ;
+    flatpak install --assumeyes --noninteractive --user gnome-nightly org.gnome.Adwaita1.Demo
 }
 
 alias smisc='silverblue-misc'
