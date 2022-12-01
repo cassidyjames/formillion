@@ -12,6 +12,9 @@ function silverblue-misc {
   ## Add Flathub as a user remote
   flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
+  ## Add GNOME Nightly as a user remote
+  flatpak remote-add --user --if-not-exists gnome-nightly https://nightly.gnome.org/gnome-nightly.flatpakrepo
+
   ## Uninstall apps to be replaced
   rpm-ostree override remove \
     gnome-terminal gnome-terminal-nautilus \

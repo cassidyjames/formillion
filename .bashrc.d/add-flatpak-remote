@@ -18,6 +18,11 @@ function add-flatpak-remote {
         echo "Added AppCenter user remote"
         ;;
 
+      gnome-nightly | nightly)
+        flatpak remote-add --user --if-not-exists gnome-nightly https://nightly.gnome.org/gnome-nightly.flatpakrepo
+        echo "Added GNOME Nightly user remote"
+        ;;
+
       *)
         echo "Unknown Flatpak remote '$arg'"
         exit 1
