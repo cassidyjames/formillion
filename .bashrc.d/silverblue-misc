@@ -15,6 +15,9 @@ function silverblue-misc {
   ## Add GNOME Nightly as a user remote
   flatpak remote-add --user --if-not-exists gnome-nightly https://nightly.gnome.org/gnome-nightly.flatpakrepo
 
+  ## Enable RPM Fusion (free and nonfree)
+  rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
   ## Uninstall apps to be replaced
   rpm-ostree override remove \
     gnome-terminal gnome-terminal-nautilus \
