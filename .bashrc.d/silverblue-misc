@@ -27,6 +27,7 @@ function silverblue-misc {
   rpm-ostree install gnome-console
   flatpak install --assumeyes --noninteractive --system flathub \
     org.gnome.Epiphany \
+    org.gnome.Loupe \
     org.gnome.Music \
     org.gnome.Totem \
     ;
@@ -39,7 +40,9 @@ function silverblue-misc {
     com.github.cassidyjames.clairvoyant \
     com.github.cassidyjames.dippi \
     com.plexamp.Plexamp \
+    com.prusa3d.PrusaSlicer \
     com.slack.Slack \
+    com.ultimaker.cura \
     com.valvesoftware.Steam \
     io.bassi.Amberol \
     io.github.realmazharhussain.GdmSettings \
