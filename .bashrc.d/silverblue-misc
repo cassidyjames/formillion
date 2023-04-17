@@ -30,7 +30,7 @@ function silverblue-misc {
     org.gnome.Loupe \
     org.gnome.Music \
     org.gnome.Totem \
-    ;
+  ;
 
   ## My user apps
   flatpak install --assumeyes --noninteractive --user flathub \
@@ -58,8 +58,11 @@ function silverblue-misc {
     re.sonny.Commit \
     tv.plex.PlexDesktop \
     tv.plex.PlexHTPC \
-    ;
-    flatpak install --assumeyes --noninteractive --user gnome-nightly org.gnome.Adwaita1.Demo
+  ;
+  flatpak install --assumeyes --noninteractive --user gnome-nightly \
+    org.gnome.Adwaita1.Demo \
+    org.gnome.Fractal.Devel \
+  ;
 }
 
 alias smisc='silverblue-misc'
