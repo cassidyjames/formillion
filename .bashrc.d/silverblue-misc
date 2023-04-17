@@ -46,6 +46,7 @@ function silverblue-misc {
     com.valvesoftware.Steam \
     io.bassi.Amberol \
     io.github.realmazharhussain.GdmSettings \
+    me.dusansimic.DynamicWallpaper \
     nl.hjdskes.gcolor3 \
     org.chromium.Chromium \
     org.gnome.Boxes \
