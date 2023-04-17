@@ -39,6 +39,7 @@ function silverblue-misc {
     com.discordapp.Discord \
     com.github.cassidyjames.clairvoyant \
     com.github.cassidyjames.dippi \
+    com.mattjakeman.ExtensionManager \
     com.plexamp.Plexamp \
     com.prusa3d.PrusaSlicer \
     com.slack.Slack \
