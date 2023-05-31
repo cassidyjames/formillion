@@ -16,7 +16,7 @@ function silverblue-misc {
   flatpak remote-add --user --if-not-exists gnome-nightly https://nightly.gnome.org/gnome-nightly.flatpakrepo
 
   ## Enable RPM Fusion (free and nonfree)
-  rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+  # rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
   ## Uninstall apps to be replaced
   rpm-ostree override remove \
@@ -39,6 +39,7 @@ function silverblue-misc {
     com.discordapp.Discord \
     com.github.cassidyjames.clairvoyant \
     com.github.cassidyjames.dippi \
+    com.github.tchx84.Flatseal \
     com.mattjakeman.ExtensionManager \
     com.plexamp.Plexamp \
     com.prusa3d.PrusaSlicer \
