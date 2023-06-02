@@ -46,15 +46,19 @@ function silverblue-misc {
     com.slack.Slack \
     com.ultimaker.cura \
     com.valvesoftware.Steam \
+    de.haeckerfelix.Fragments \
     io.bassi.Amberol \
     io.github.realmazharhussain.GdmSettings \
     me.dusansimic.DynamicWallpaper \
     nl.hjdskes.gcolor3 \
     org.chromium.Chromium \
+    org.gimp.GIMP \
     org.gnome.Boxes \
     org.gnome.Builder \
     org.gnome.design.Contrast \
+    org.inkscape.Inkscape \
     org.mozilla.firefox \
+    org.signal.Signal \
     org.telegram.desktop \
     re.sonny.Commit \
     tv.plex.PlexDesktop \
