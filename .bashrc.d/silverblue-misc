@@ -29,6 +29,7 @@ function silverblue-misc {
     org.gnome.Epiphany \
     org.gnome.Loupe \
     org.gnome.Music \
+    org.gnome.Snapshot \
     org.gnome.Totem \
   ;
 
