@@ -26,19 +26,22 @@ function silverblue-misc {
   ## Install better defaults
   rpm-ostree install gnome-console
   flatpak install --assumeyes --noninteractive --system flathub \
+    org.gnome.Decibels \
     org.gnome.Epiphany \
     org.gnome.Loupe \
     org.gnome.Music \
+    org.gnome.Papers \
+    org.gnome.Showtime \
     org.gnome.Snapshot \
-    org.gnome.Totem \
   ;
 
   ## My user apps
   flatpak install --assumeyes --noninteractive --user flathub \
     com.bitwarden.desktop \
+    com.cassidyjames.butler \
+    com.cassidyjames.clairvoyant \
     com.cassidyjames.plausible \
     com.discordapp.Discord \
-    com.github.cassidyjames.clairvoyant \
     com.github.cassidyjames.dippi \
     com.github.tchx84.Flatseal \
     com.mattjakeman.ExtensionManager \
@@ -49,7 +52,6 @@ function silverblue-misc {
     com.valvesoftware.Steam \
     de.haeckerfelix.Fragments \
     io.bassi.Amberol \
-    io.github.realmazharhussain.GdmSettings \
     me.dusansimic.DynamicWallpaper \
     nl.hjdskes.gcolor3 \
     org.chromium.Chromium \
@@ -57,17 +59,16 @@ function silverblue-misc {
     org.gnome.Boxes \
     org.gnome.Builder \
     org.gnome.design.Contrast \
+    org.gnome.Fractal \
     org.inkscape.Inkscape \
     org.mozilla.firefox \
     org.signal.Signal \
-    org.telegram.desktop \
     re.sonny.Commit \
     tv.plex.PlexDesktop \
     tv.plex.PlexHTPC \
   ;
   flatpak install --assumeyes --noninteractive --user gnome-nightly \
     org.gnome.Adwaita1.Demo \
-    org.gnome.Fractal.Devel \
   ;
 }
 
