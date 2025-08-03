@@ -35,6 +35,7 @@ function silverblue-misc {
 
   ## My user apps
   flatpak install --assumeyes --noninteractive --user flathub \
+    as.may.moat \
     com.bitwarden.desktop \
     com.cassidyjames.butler \
     com.cassidyjames.clairvoyant \
@@ -51,6 +52,9 @@ function silverblue-misc {
     de.haeckerfelix.Fragments \
     io.bassi.Amberol \
     me.dusansimic.DynamicWallpaper \
+    net.hhoney.candy \
+    net.hhoney.rota \
+    net.hhoney.tinycrate \
     nl.hjdskes.gcolor3 \
     org.chromium.Chromium \
     org.gimp.GIMP \
