@@ -62,6 +62,7 @@ function silverblue-misc {
     org.gnome.Builder \
     org.gnome.design.Contrast \
     org.gnome.Fractal \
+    org.godotengine.Godot \
     org.inkscape.Inkscape \
     org.mozilla.firefox \
     org.signal.Signal \
