@@ -20,11 +20,9 @@ function silverblue-misc {
 
   ## Uninstall apps to be replaced
   rpm-ostree override remove \
-    gnome-terminal gnome-terminal-nautilus \
     firefox firefox-langpacks
 
   ## Install better defaults
-  rpm-ostree install gnome-console
   flatpak install --assumeyes --noninteractive --system flathub \
     org.gnome.Decibels \
     org.gnome.Epiphany \
