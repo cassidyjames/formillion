@@ -29,49 +29,86 @@ function silverblue-misc {
 
   ## Install better defaults
   flatpak install --assumeyes --noninteractive --system flathub \
+    org.gnome.Calculator \
+    org.gnome.Calendar \
+    org.gnome.Characters \
+    org.gnome.clocks \
+    org.gnome.Contacts \
     org.gnome.Decibels \
     org.gnome.Epiphany \
+    org.gnome.font-viewer \
     org.gnome.Loupe \
+    org.gnome.Maps \
     org.gnome.Music \
     org.gnome.Papers \
+    org.gnome.Podcasts \
     org.gnome.Showtime \
     org.gnome.Snapshot \
+    org.gnome.TextEditor \
+    org.gnome.Weather \
   ;
 
   ## My user apps
   flatpak install --assumeyes --noninteractive --user flathub \
+    app.drey.Dialect \
+    app.drey.Warp \
     as.may.moat \
+    com.belmoussaoui.Decoder \
     com.bitwarden.desktop \
     com.cassidyjames.butler \
     com.cassidyjames.clairvoyant \
     com.cassidyjames.dippi \
     com.cassidyjames.plausible \
     com.discordapp.Discord \
+    com.fastmail.Fastmail \
+    com.github.finefindus.eyedropper \
+    com.github.huluti.Curtail \
     com.github.tchx84.Flatseal \
+    com.makemkv.MakeMKV \
     com.mattjakeman.ExtensionManager \
+    com.mojang.Minecraft \
+    com.obsproject.Studio \
     com.plexamp.Plexamp \
+    com.protonvpn.www \
     com.prusa3d.PrusaSlicer \
     com.slack.Slack \
     com.ultimaker.cura \
     com.valvesoftware.Steam \
     de.haeckerfelix.Fragments \
+    dev.geopjr.Calligraphy \
+    dev.geopjr.Tuba \
+    fr.handbrake.ghb \
     io.bassi.Amberol \
+    io.github.IshuSinghSE.aurynk \
     io.github.kolunmi.Bazaar \
+    io.github.nokse22.Exhibit \
+    io.gitlab.adhami3310.Impression \
+    io.gitlab.news_flash.NewsFlash \
+    io.mrarm.mcpelauncher \
     me.dusansimic.DynamicWallpaper \
     net.hhoney.candy \
     net.hhoney.rota \
     net.hhoney.tinycrate \
     nl.hjdskes.gcolor3 \
+    org.audacityteam.Audacity \
     org.chromium.Chromium \
+    org.flatpak.Builder \
     org.gimp.GIMP \
     org.gnome.Boxes \
     org.gnome.Builder \
     org.gnome.design.Contrast \
+    org.gnome.design.IconLibrary \
     org.gnome.Fractal \
+    org.gnome.gitlab.YaLTeR.VideoTrimmer \
+    org.gnome.PowerStats \
     org.godotengine.Godot \
     org.inkscape.Inkscape \
+    org.kde.kdenlive \
+    org.libreoffice.LibreOffice \
     org.mozilla.firefox \
+    org.nickvision.tubeconverter \
     org.signal.Signal \
+    org.videolan.VLC \
     re.sonny.Commit \
     tv.plex.PlexDesktop \
     tv.plex.PlexHTPC \
