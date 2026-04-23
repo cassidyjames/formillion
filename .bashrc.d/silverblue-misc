@@ -18,6 +18,11 @@ function silverblue-misc {
   ## Enable RPM Fusion (free and nonfree)
   # rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
+  ## Install CLI tools
+  rpm-ostree install \
+    gh \
+  ;
+
   ## Uninstall apps to be replaced
   rpm-ostree override remove \
     firefox firefox-langpacks
