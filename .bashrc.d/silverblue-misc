@@ -39,9 +39,9 @@ function silverblue-misc {
     com.bitwarden.desktop \
     com.cassidyjames.butler \
     com.cassidyjames.clairvoyant \
+    com.cassidyjames.dippi \
     com.cassidyjames.plausible \
     com.discordapp.Discord \
-    com.github.cassidyjames.dippi \
     com.github.tchx84.Flatseal \
     com.mattjakeman.ExtensionManager \
     com.plexamp.Plexamp \
