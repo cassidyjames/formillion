@@ -1,0 +1,50 @@
+#!/bin/bash
+#
+# docker-setup
+#
+# Set up Docker CE on Fedora Silverblue
+
+function docker-setup {
+  ## Add Docker CE repo
+  if [ ! -f /etc/yum.repos.d/docker-ce.repo ]; then
+    curl -o /tmp/docker-ce.repo https://download.docker.com/linux/fedora/docker-ce.repo
+    sudo install -o 0 -g 0 -m644 /tmp/docker-ce.repo /etc/yum.repos.d/docker-ce.repo
+    rm /tmp/docker-ce.repo
+  fi
+
+  ## Install Docker CE and related packages
+  if ! rpm -q docker-ce &>/dev/null; then
+    rpm-ostree install --apply-live \
+      docker-ce \
+      docker-ce-cli \
+      containerd.io \
+      docker-buildx-plugin \
+      docker-compose-plugin \
+    ;
+  fi
+
+  ## If live apply didn't take effect, a reboot is required
+  if ! command -v docker &>/dev/null; then
+    echo "Docker is not yet available — reboot required to apply pending changes."
+    return 1
+  fi
+
+  ## Add docker group from package-provided group file
+  if ! grep -qE "^docker:" /etc/group; then
+    grep -E "^docker:" /usr/lib/group | sudo tee -a /etc/group
+  fi
+
+  ## Add current user to docker group
+  if ! id -nG "$USER" | grep -qw docker; then
+    sudo usermod -aG docker "$USER"
+    echo "Added $USER to docker group — reboot required, then re-run to verify."
+    return 0
+  fi
+
+  ## Enable and start Docker service
+  systemctl enable --now docker
+
+  ## Confirm success
+  docker version
+  docker compose version
+}

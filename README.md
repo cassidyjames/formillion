@@ -38,6 +38,14 @@ Or, to do all the Fedora apps in one go (**experimental**; may unnecessarily uni
 f2fh --all
 ```
 
+### docker-setup
+
+Set up Docker from the official Docker repo; requires a reboot because user groups:
+
+```sh
+docker-setup
+```
+
 ## Installation
 
 Copy the `.bashrc.d` folder into your own `~/`.
