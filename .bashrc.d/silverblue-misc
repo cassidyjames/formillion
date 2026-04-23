@@ -51,6 +51,7 @@ function silverblue-misc {
     com.valvesoftware.Steam \
     de.haeckerfelix.Fragments \
     io.bassi.Amberol \
+    io.github.kolunmi.Bazaar \
     me.dusansimic.DynamicWallpaper \
     net.hhoney.candy \
     net.hhoney.rota \
