@@ -32,7 +32,7 @@ You can also pass in multiple Flatpak app IDs, e.g.:
 f2fh org.gnome.Calculator org.gnome.eog
 ```
 
-Or, to do all the Fedora apps in one go (**exprimental**; may unnecessarily uninstall and reinstall non-Fedora Flatpaks!):
+Or, to do all the Fedora apps in one go (**experimental**; may unnecessarily uninstall and reinstall non-Fedora Flatpaks!):
 
 ```sh
 f2fh --all

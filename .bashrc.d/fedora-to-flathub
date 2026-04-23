@@ -13,7 +13,7 @@ function fedora-to-flathub {
     for app in `flatpak remote-ls fedora --app --columns=application`; do
       fedora-to-flathub "$app"
     done
-    flatpak uninstall --assumeyes --noninterative --unused
+    flatpak uninstall --assumeyes --noninteractive --unused
     flatpak remote-delete --system fedora
   else
     for app in "$@"; do
