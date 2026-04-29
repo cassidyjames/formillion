@@ -21,6 +21,7 @@ function silverblue-misc {
   ## Install CLI tools
   rpm-ostree install --apply-live \
     gh \
+    glab \
   ;
 
   ## Uninstall apps to be replaced
